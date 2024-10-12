@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign-up-form</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.13/css/intlTelInput.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Create Account</h1>
+        </header>
+        <main>
+            <form action="#" method="post">
+                <div class="form-row">
+                    <div>
+                        <label for="firstName">First Name</label>
+                        <input type="text" name="firstName" id="firstName" autocomplete="given-name" required>
+                    </div>
+                    <div>
+                        <label for="surName">Surname</label>
+                        <input type="text" name="surName" id="surName" autocomplete="family-name" required>
+                    </div>
+                </div>
+            
+                <div>
+                    <label for="phoneNum">Phone Number</label>
+                    <input type="tel" id="phoneNum" name="phone-number" autocomplete="tel" required>
+                </div>
+
+                <div class="form-row">
+                    <div>
+                        <label for="mail">Email</label>
+                        <input type="email" name="Email" id="mail" placeholder="you@example.com" autocomplete="email" required>
+                    </div>
+                    
+                </div>
+            
+                <div class="form-row">
+                    <div class="input-container">
+                        <label for="password">Password</label>
+                        <input type="password" name="password" id="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[\W_]).{8,}" min="8" required>
+                        <span class="toggle-password" id="togglePassword">👁️</span>
+                    </div>
+                    <div class="input-container">
+                        <label for="confirm">Confirm Password</label>
+                        <input type="password" name="confirmPassword" id="confirm" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[\W_]).{8,}" min="8" required>
+                        <span class="toggle-password" id="toggleConfirmPassword">👁️</span>
+                    </div>
+                </div>
+            
+                <div id="passwordRequirements">
+                    <ul>
+                        <li class="requirement invalid">At least 8 characters</li>
+                        <li class="requirement invalid">At least one uppercase letter</li>
+                        <li class="requirement invalid">At least one lowercase letter</li>
+                        <li class="requirement invalid">At least one number</li>
+                        <li class="requirement invalid">At least one special character</li>
+                    </ul>
+                </div>
+                <div class="checkbox-container">
+                    <input class="check" type="checkbox" id="terms" required>
+                    <label for="terms">I agree to the <a href="#">terms and conditions</a></label>
+                </div>
+                
+                <button type="submit" id="submitBtn">Sign Up</button>
+                <p>If you already have an account, <a href="#">log in</a>.</p>
+            </form>
+            
+        </main>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.13/js/intlTelInput.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.13/js/utils.js"></script>
+    <script src="main.js"></script>
+  
+</body>
+</html>
